@@ -68,7 +68,7 @@ const changeDir = function (dir) {
 //update cell colour
 const bgColour = function (x, y, clr) {
     var updateCell = document.getElementById('myTable');
-    updateCell.rows[x - 1].cells[y - 1].style.backgroundColor = clr;
+    updateCell.rows[x].cells[y - 1].style.backgroundColor = clr;
 }
 
 // Get the input
@@ -83,17 +83,17 @@ document.querySelector('.button').addEventListener('click', function () {
             bgColour(position.posX, position.posY, 'Green');
             break;
         case 'left':
-            bgColour(position.posX, position.posY, 'White');
+            //     bgColour(position.posX, position.posY, 'White');
             changeDir('left');
-            bgColour(position.posX, position.posY, 'Green');
+            //   bgColour(position.posX, position.posY, 'Green');
             break;
         case 'right':
-            bgColour(position.posX, position.posY, 'White');
+            //    bgColour(position.posX, position.posY, 'White');
             changeDir('right');
-            bgColour(position.posX, position.posY, 'Green');
+            //    bgColour(position.posX, position.posY, 'Green');
             break;
         case 'report':
-            bgColour(position.posX, position.posY, 'Red');
+            bgColour(position.posX - 1, position.posY - 1, 'Red');
             break;
         case 'place':
             temp = userInput.slice(5, userInput.length);
